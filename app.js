@@ -12,6 +12,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/students', studentsRoutes);
+//.......app.use('/some-other-routes-heres', some-other-routes, some other controlerss like Teachers, Admin etc...);.................
 
 
 const port = process.env.PORT || 5000;

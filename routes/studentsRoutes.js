@@ -1,3 +1,4 @@
+//Contains all the API routes of students
 import express from 'express';
 const router = express.Router();
 

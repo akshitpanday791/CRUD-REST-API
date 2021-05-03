@@ -1,5 +1,10 @@
+//Contains all the business logic of operations/functionality related to students
 import Student from '../models/students.js';
 
+
+//@description:     Get all the students
+//@route:           GET /students
+//@access:          Public
 const getStudents = async(req, res) => {
     try{
         const data = await Student.find();
@@ -9,6 +14,10 @@ const getStudents = async(req, res) => {
     }
 };
 
+
+//@description:     Get single student details by ID
+//@route:           GET /students/:id
+//@access:          Public
 const getStudentById = async(req, res) => {
     try{
         const _id = req.params.id;
@@ -25,6 +34,9 @@ const getStudentById = async(req, res) => {
      }
 };
 
+//@description:     Create a new student
+//@route:           POST /students
+//@access:          Public
 const createStudent = async(req,res) => {
     try {
         const user = new Student(req.body);
@@ -35,6 +47,9 @@ const createStudent = async(req,res) => {
     }
 };
 
+//@description:     Update a existing student
+//@route:           UPDATE /students/:id
+//@access:          Public
 const updateStudent = async(req, res) => {
     try{
         const _id = req.params.id;
@@ -45,6 +60,10 @@ const updateStudent = async(req, res) => {
     }
 };
 
+
+//@description:     Deletr a student
+//@route:           DELETE /students/:id
+//@access:          Public
 const deleteStudent = async(req, res) => {
     try{
         const _id = req.params.id;

@@ -1,3 +1,4 @@
+//Establish Connection to Database
 import mongoose from 'mongoose';
 import colors from 'colors';
 
