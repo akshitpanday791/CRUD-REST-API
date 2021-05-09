@@ -14,7 +14,6 @@ const getStudents = async(req, res) => {
     }
 };
 
-
 //@description:     Get single student details by ID
 //@route:           GET /students/:id
 //@access:          Public
